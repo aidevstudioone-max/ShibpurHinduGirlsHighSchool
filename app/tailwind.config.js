@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./index.html", "./script.js"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -39,17 +39,9 @@ module.exports = {
         bengali: ["'Tiro Bangla'", "serif"],
       },
       backgroundImage: {
-        "grain": "radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0)",
+        grain: "radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0)",
       },
       keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-          "50%": { transform: "translateY(-18px) rotate(3deg)" },
-        },
-        floatSlow: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
-        },
         marquee: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
@@ -60,8 +52,6 @@ module.exports = {
         },
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
-        floatSlow: "floatSlow 8s ease-in-out infinite",
         marquee: "marquee 28s linear infinite",
         blob: "blob 10s ease-in-out infinite",
       },

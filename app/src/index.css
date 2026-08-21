@@ -37,24 +37,8 @@
     @apply inline-flex items-center gap-2 rounded-full border border-gold-400/60 bg-gold-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-maroon-700;
   }
 
-  .fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  .reveal {
-    @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
-  }
-  .reveal.is-visible {
-    @apply opacity-100 translate-y-0;
-  }
-
   .blob-shape {
     @apply animate-blob;
-  }
-
-  .card-hover {
-    @apply transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-maroon-900/10;
   }
 
   .glass-card {
