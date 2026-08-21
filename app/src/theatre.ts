@@ -5,7 +5,14 @@ import { getProject } from '@theatre/core'
 // so that pose is visually tweakable; the one-shot mount intro and idle
 // motion are driven separately by GSAP / drei so the two tools don't fight
 // over the same values.
-export const theatreProject = getProject('Shibpur School Hero')
+//
+// We never export a Studio-authored state.json (the JSX defaults are the
+// only pose we ship), so an explicit empty state is passed here — without
+// it, @theatre/core throws after 1s in any session where Studio never
+// attaches, i.e. every production visit.
+export const theatreProject = getProject('Shibpur School Hero', {
+  state: { sheetsById: {}, definitionVersion: '0.4.0' },
+})
 export const heroSheet = theatreProject.sheet('Hero Scene')
 
 if (import.meta.env.DEV) {
