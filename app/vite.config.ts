@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 // with the production build output committed to the repo root (see ../ ).
 export default defineConfig({
   plugins: [react()],
-  base: '/ShibpurHinduGirlsHighSchool/',
+  base: './',   // relative, so the build works at a domain root or a subpath
   build: {
     outDir: '../dist-site',
     emptyOutDir: true,
